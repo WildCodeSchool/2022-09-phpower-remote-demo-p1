@@ -10,5 +10,7 @@
 <body>
     <?php include "_header.php" ?>
     <h1>Titre</h1>
+
+    <?php include "_footer.php" ?>
 </body>
 </html>
