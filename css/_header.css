@@ -1,0 +1,7 @@
+header {
+    background-color: var(--primary);
+}
+
+header h1 {
+    color: white;
+}
