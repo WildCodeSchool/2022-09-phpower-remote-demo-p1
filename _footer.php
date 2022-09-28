@@ -1,7 +1,3 @@
 <footer>
-    <ul>
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-    </ul>
+    &copy; 2022 wilders
 </footer>

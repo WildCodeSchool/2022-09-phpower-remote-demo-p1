@@ -1,7 +1,23 @@
 header {
-    background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 250px;
+  background-image: url('https://picsum.photos/id/1020/1920/600');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  color: #fff;
+  padding: 0.5rem;
 }
 
 header h1 {
-    color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+@media screen {
+  header h1 {
+    filter: drop-shadow(0px 3px 8px #000);
+  }
 }
