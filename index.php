@@ -28,6 +28,7 @@
         <section class="featured-posts" id="featured-posts">
             <h2>Featured posts</h2>
             <?php
+            // TABLEAU MULTI-DIMENSIONNEL
             $articles = [
                 ["id" => 1, "title" => "PHP c'est top"],
                 ["id" => 2, "title" => "Vive les include"],
@@ -42,6 +43,25 @@
                     <a href="/article.php?id=<?=$article["id"]?>">read</a>
                 </article>
             <?php endforeach; ?>
+
+            <!-- <?php
+            // TABLEAU INDEXÉ
+            $articles = [
+                "PHP c'est top",
+                "Vive les include",
+                "Vive la Bretagne",
+                "PHP c'est top",
+                "PHP c'est top",
+            ];
+            ?>
+            <?php foreach ($articles as $index => $article) : ?>
+                <article>
+                    <h1><?=$article?></h1>
+                    <a href="/article.php?id=<?=$index+1?>">read</a>
+                </article>
+            <?php endforeach; ?> -->
+
+
         </section>
     </main>
     <?php include "_footer.php" ?>
