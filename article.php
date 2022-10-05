@@ -1,6 +1,12 @@
 <?php
-$id = $_GET['id'];
-include "./data/article-$id.php";
+$id = $_GET["id"];
+$file = "./data/content-$id.php";
+if (!file_exists($file)) {
+    header("HTTP/1 404 Not found");
+    die("Page not found");
+}
+
+include $file;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,14 +21,14 @@ include "./data/article-$id.php";
 
 <body>
     <?php include "_nav.php" ?>
+    
     <main>
-        <img src="<?=$img?>" alt="">
         <h1>
-            <?=$title?>
+            <?= $title ?>
         </h1>
-        <p>
-            <?=$body?>
-        </p>
+        <img src="<?= $img ?>" alt="">
+
+        <?= $body ?>
     </main>
     <?php include "_footer.php" ?>
 </body>

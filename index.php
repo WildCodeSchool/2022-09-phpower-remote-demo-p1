@@ -27,28 +27,21 @@
         </section>
         <section class="featured-posts" id="featured-posts">
             <h2>Featured posts</h2>
-            
-            <article>
-                <h1>Article 1</h1>
-                <a href="/article.php?id=1">read</a>
-            </article>
-            <article>
-                <h1>Article 2</h1>
-                <a href="/article.php?id=2">read</a>
-            </article>
-            <article>
-                <h1>Article 3</h1>
-                <a href="/article.php?id=3">read</a>
-            </article>
-            <article>
-                <h1>Article 4</h1>
-                <a href="/article.php?id=4">read</a>
-            </article>
-            <article>
-                <h1>Article 5</h1>
-                <a href="/article.php?id=5">read</a>
-            </article>
-            
+            <?php
+            $articles = [
+                ["id" => 1, "title" => "PHP c'est top"],
+                ["id" => 2, "title" => "Vive les include"],
+                ["id" => 3, "title" => "Vive la Bretagne"],
+                ["id" => 4, "title" => "PHP c'est top"],
+                ["id" => 5, "title" => "PHP c'est top"],
+            ];
+            ?>
+            <?php foreach ($articles as $article) : ?>
+                <article>
+                    <h1><?=$article["title"]?></h1>
+                    <a href="/article.php?id=<?=$article["id"]?>">read</a>
+                </article>
+            <?php endforeach; ?>
         </section>
     </main>
     <?php include "_footer.php" ?>

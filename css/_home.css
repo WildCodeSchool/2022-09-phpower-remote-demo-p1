@@ -13,7 +13,7 @@ section > article {
   border-radius: 0.5rem;
   background-color: #fff;
   box-shadow: -2px 5px 10px rgb(0 0 0 / 20%);
-  transition: transform 0.4s ease;
+  transition: background-color 0.4s ease;
 }
 section > article > a {
   padding: 0.5rem;
@@ -22,6 +22,7 @@ section > article > a {
   color: var(--primary-text-color);
   text-align: center;
   text-decoration: none;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 section > article > a::after {
     position: absolute;
@@ -32,7 +33,11 @@ section > article > a::after {
     content: "";
 }
 section > article:hover {
-  transform: scale(1.2);
+  background-color: var(--primary);
+}
+section > article:hover > a {
+  color: var(--primary);
+  background-color: var(--primary-text-color);
 }
 
 /* Posts section */

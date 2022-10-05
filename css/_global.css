@@ -14,12 +14,14 @@ body {
 
 /* navigation */
 nav {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
   background-color: #f76c6c;
   color: white;
+  box-shadow: 0 4px 10px #ccc;
 }
 
 nav h1 {
@@ -57,4 +59,8 @@ nav h1 a {
 main {
   max-width: 65ch;
   margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
 }
